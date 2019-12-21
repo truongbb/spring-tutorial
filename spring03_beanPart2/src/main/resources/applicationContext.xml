@@ -22,7 +22,7 @@
         <property name="avgMark" value="8.5"/>
         <!--  đây là một kiểu inject bean vào trong một bean khác, thuộc tính clazz của Student có kiểu là Clazz
           mà nó lại là một bean định nghĩa ngay bên trên, vì thế, ta phải làm thế này
-          (Ở dưới có cách làm ngắn gọn hơn)
+          (Ở dưới có cách làm ngắn gọn hơn - nhưng liên quan tới auto-wiring, sẽ đề cập trong các bài sau)
           -->
         <property name="clazz">
             <bean id="student_clazz" class="vn.com.ntqsolution.bean.Clazz">

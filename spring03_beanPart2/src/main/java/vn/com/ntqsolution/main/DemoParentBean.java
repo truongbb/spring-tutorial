@@ -1,6 +1,7 @@
 package vn.com.ntqsolution.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import vn.com.ntqsolution.bean.Faculty;
 import vn.com.ntqsolution.bean.Person;
 import vn.com.ntqsolution.bean.Student;
 
@@ -26,6 +27,11 @@ public class DemoParentBean {
          * khi xem kết quả có thể thấy được giá trị các thuộc tính chung như phone hay name của student sẽ set đè lên person khi khởi tạo student
          *
          */
+
+        // demo inject collection
+        Faculty faculty = (Faculty) context.getBean("faculty");
+        System.out.println(faculty);
+
     }
 
 }

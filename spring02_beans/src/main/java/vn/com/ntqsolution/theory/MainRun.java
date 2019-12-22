@@ -28,7 +28,7 @@ public class MainRun {
      */
 
     public static void main(String[] args) {
-        // đọc file cấu hình sping, file cấu hình có tên mặc định là applicationContext.xml
+        // đọc file cấu hình spring, file cấu hình có tên mặc định là applicationContext.xml
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // trả về objet theo id

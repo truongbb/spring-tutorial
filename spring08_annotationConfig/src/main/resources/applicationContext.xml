@@ -34,4 +34,6 @@
     <bean id="student" class="vn.com.ntqsolution.bean.student.Student"/>
 
 
+    <bean id="car" class="vn.com.ntqsolution.bean.others.Car"/>
+
 </beans>

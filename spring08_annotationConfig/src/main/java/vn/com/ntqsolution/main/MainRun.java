@@ -3,11 +3,13 @@ package vn.com.ntqsolution.main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import vn.com.ntqsolution.bean.book.Author;
 import vn.com.ntqsolution.bean.book.Book;
+import vn.com.ntqsolution.bean.others.Car;
 import vn.com.ntqsolution.bean.student.Clazz;
 import vn.com.ntqsolution.bean.student.Student;
 
 public class MainRun {
 
+    // Trong bài này chỉ tìm hiểu một số annotation cơ bản và quen thuộc, một số khác được giới thiệu ở các bài sau.
 
     public static void main(String[] args) {
 
@@ -84,6 +86,41 @@ public class MainRun {
 
         System.out.println(student);
         // </editor-fold>
+
+
+        /**
+         * @PostConstruct & @PreDestroy
+         *
+         * Đây là 2 annotation liên quan tới vòng đời của một bean.
+         *
+         * Khi khởi tạo 1 bean, obj được khởi tạo trước, tức là constructor, setter sẽ được gọi trước.
+         * Sau đó là Spring sẽ tạo bean, hàm nơi có annotation @PostConstruct sẽ được gọi.
+         * Trong hàm đó chúng ta sẽ thực hiện xử lý một số nghiệp vụ cần thiết cho từng bài toán cụ thể
+         * Tương tự, trước khi bean bị phá hủy bởi IoC container thì hàm có annotation @PreDestroy sẽ được gọi.
+         *
+         * Demo trong class Car
+         *
+         */
+
+        // <editor-fold desc="@PostConstruct & @PreDestroy">
+        // nhìn console xem nó in ra từng dòng trong từng hàm ở class Car
+        Car car = (Car) context.getBean("car");
+        System.out.println(car);
+        context.getBeanFactory().destroyBean(car);
+        // </editor-fold>
+
+
+        /**
+         *
+         * @Resource
+         *
+         * Annotation này là sự kết hợp của @Autowired và @Qualifier
+         *
+         * Tức là bean được autowired và được chỉ rõ là bean nào (nếu sử dụng thuộc tính name của @Resource)
+         *
+         * Ví dụ ở class Student
+         *
+         */
 
 
     }

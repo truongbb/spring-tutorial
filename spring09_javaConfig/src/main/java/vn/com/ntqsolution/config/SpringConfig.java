@@ -7,4 +7,6 @@ import vn.com.ntqsolution.bean.BeanConfig;
 @Configuration
 @Import({BeanConfig.class, SecurityConfig.class})
 public class SpringConfig {
+
+
 }

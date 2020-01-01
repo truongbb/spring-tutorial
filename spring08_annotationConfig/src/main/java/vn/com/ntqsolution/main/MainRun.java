@@ -98,6 +98,8 @@ public class MainRun {
          * Trong hàm đó chúng ta sẽ thực hiện xử lý một số nghiệp vụ cần thiết cho từng bài toán cụ thể
          * Tương tự, trước khi bean bị phá hủy bởi IoC container thì hàm có annotation @PreDestroy sẽ được gọi.
          *
+         * (hình ảnh trong thư mục img)
+         *
          * Demo trong class Car
          *
          */

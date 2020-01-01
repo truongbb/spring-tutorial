@@ -5,6 +5,8 @@ public class Theory {
     /**
      * ===================== SPRING WEB MVC ======================
      *
+     * Cắm tomcat vào mà chạy project.
+     *
      *
      * Là 1 nhánh của Spring framework được sử dụng cho các ứng dụng web theo mô hình MVC.
      * Mô hình của Spring MVC được thể hiện ở trong ảnh (thư mục img)

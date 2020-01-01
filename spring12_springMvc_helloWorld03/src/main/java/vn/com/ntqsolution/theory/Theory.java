@@ -48,7 +48,6 @@ public class Theory {
      *      - DispatcherServlet load các bean cơ bản như ta thường biết như controller, view resolver, handler mappings, ...
      *      - ContextLoaderListener load các bean khác như tầng giữa (middle-tier) hoặc tầng dữ liệu (data-tier) phục vụ việc xử lý phía sau (back end) của một ứng dụng.
      *
-     *
      * ----------------------
      *
      * Trong WebConfig chứa một số annotation:
@@ -58,14 +57,12 @@ public class Theory {
      *              +, Không có view resolver nào được cấu hình. Nếu không cấu hình view resolver thì Spring sẽ sử dụng BeanNameViewResolver mặc định.
      *              BeanNameViewResolver này sẽ resolve các view bằng cách tìm kiếm view nào có ID khớp với tên mà nó nhận được và các view đó phải implement View interface.
      *
-     *              +, Component scanning không được bật, hậu quả là nó sẽ quét toàn bộ controller được định nghĩa trong các file cấu hình có chứa @Configuration của project.
+     *              +, Component scanning không được bật, hậu quả là nó sẽ quét toàn bộ controller được định nghĩa trong các file cấu hình có chứa @Configuration hoặc các file applicationContext.xml của project.
      *
      *              +, DispatcherServlet sẽ xử lý tất cả các request không phân chia static request (gửi ảnh, file nhị phân, .... ) hay request thông thường
      *              Vì thế nên phải @ComponentScan, và config bean ViewResolver bên trong cùng với configureDefaultServletHandling() để giải quyết các static content
      *
      *      - Phần @Bean resolver quá rõ ràng và giống với file cofig sử dụng xml.
-     *
-     *
      *
      * -----------------------
      *

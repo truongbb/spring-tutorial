@@ -6,7 +6,7 @@ public class Theory {
      *
      * Quay lại với việc config bằng xml để hiểu rõ hơn tại sao annotation @Controller được sinh ra và sử dụng.
      *
-     * Ở HomeController, ta vẫn sử dujg @Controller như bài trước đã làm, không cần cấu hình ở file config xml, nhưng phải có 2 thuộc tính
+     * Ở HomeController, ta vẫn sử dụng @Controller như bài trước đã làm, không cần cấu hình ở file config xml, nhưng phải có 2 thuộc tính
      * <context:component-scan base-package="vn.com.ntqsolution.controller"/>
      * <mvc:annotation-driven/>
      * để quét các bean và đánh dấu sử dụng annotation của spring web mvc.

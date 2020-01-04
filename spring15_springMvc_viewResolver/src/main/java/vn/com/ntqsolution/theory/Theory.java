@@ -31,5 +31,8 @@ public class Theory {
      * nhưng thay vì sử dụng file xml, nó sẽ sử dụng filr properties để cấu hình gián tiếp (resource bundle mà)
      * Xem file dispatcher-servlet để biết thêm chi tiết
      *
+     * Ngoài ra còn có các view resolver khác như trong ảnh mô tả (thư mục img), mỗi loại cũng có các cách sử dụng và cấu hình khác nhau,
+     * sử dụng các thẻ được hỗ trợ riêng cho view resolver khác nhau như thymeleaf, sf, ...
+     *
      */
 }

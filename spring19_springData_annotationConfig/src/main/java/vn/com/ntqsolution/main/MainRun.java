@@ -1,9 +1,9 @@
 package vn.com.ntqsolution.main;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import vn.com.ntqsolution.bean.Student;
 import vn.com.ntqsolution.repository.StudentRepository;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 

@@ -2,10 +2,15 @@ package vn.com.ntqsolution.repository;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.transform.AliasToBeanResultTransformer;
+import org.hibernate.type.DateType;
+import org.hibernate.type.StringType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.stereotype.Repository;
 import vn.com.ntqsolution.bean.Student;
+import vn.com.ntqsolution.entity.StudentEntity;
 import vn.com.ntqsolution.mapper.StudentMapper;
 
 import javax.sql.DataSource;
@@ -112,5 +117,37 @@ public class StudentRepositoryImpl extends BaseRepository implements StudentRepo
             return result.get(0);
         }
         return null;
+    }
+
+    /**
+     * Sử dụng hibernate
+     *
+     * @param lastName
+     * @return Student
+     */
+    @Override
+    public List<StudentEntity> findByLastName(String lastName) {
+        List<StudentEntity> students = null;
+        Session session = getSession();
+        try {
+            session.beginTransaction();
+            String sql = "select s.ma_sv id, s.ho_sv firstName, s.ten_sv lastName, s.gioi_tinh gender, s.ngay_sinh birthday, " +
+                    "s.noi_sinh address from dm_sv s where lower(s.ten_sv) like :p_last_name";
+            NativeQuery query = session.createSQLQuery(sql);
+            students = query
+                    .setParameter("p_last_name", "%" + lastName.toLowerCase() + "%")
+                    .addScalar("id", new StringType())
+                    .addScalar("firstName", new StringType())
+                    .addScalar("lastName", new StringType())
+                    .addScalar("gender", new StringType())
+                    .addScalar("birthday", new DateType())
+                    .addScalar("address", new StringType())
+                    .setResultTransformer(new AliasToBeanResultTransformer(StudentEntity.class)).list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return students;
     }
 }

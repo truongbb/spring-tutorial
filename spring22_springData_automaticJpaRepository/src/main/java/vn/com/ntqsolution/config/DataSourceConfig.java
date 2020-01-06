@@ -2,6 +2,7 @@ package vn.com.ntqsolution.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -21,7 +22,20 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     @Bean
-    public DataSource dataSource() {
+    @Profile("production") // cấu hình data source cho môi trường production
+    public DataSource dataSourcePr() {
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+        ds.setUrl("jdbc:oracle:thin:@192.168.0.100:1521:xe");
+        ds.setUsername("assignment_db");
+        ds.setPassword("123456");
+        return ds;
+    }
+
+
+    @Bean
+    @Profile("develop") // cấu hình data source cho môi trường develop
+    public DataSource dataSourceodDev() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("oracle.jdbc.driver.OracleDriver");
         ds.setUrl("jdbc:oracle:thin:@192.168.0.100:1521:xe");

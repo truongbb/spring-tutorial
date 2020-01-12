@@ -103,7 +103,7 @@ public class Theory {
      * các thư viện về core, web mvc, jdbc, ... hoặc tự nhúng tomcat để chạy ứng dụng, ta không cần add tay tomcat như trước nữa, ...
      *
      *
-     * Như ở trong ví dụ bài này dựng một API mà không cần có file config xml, thâm chí file application.prperties để trống,
+     * Như ở trong ví dụ bài này dựng một API mà không cần có file config xml, thậm chí file application.prperties để trống,
      * và Spring boot làm mọi thứ cho ta, cả việc nhúng tomcat vào chạy
      *
      *

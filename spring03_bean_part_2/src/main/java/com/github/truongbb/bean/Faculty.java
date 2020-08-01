@@ -1,4 +1,4 @@
-package com.github.truongbb;
+package com.github.truongbb.bean;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -6,16 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Message {
+public class Faculty {
 
-    String message;
+  List<Student> students;
 
-    public void showMessage() {
-        System.out.println("Mess: " + this.message);
-    }
-
+  List<String> demo;
 }

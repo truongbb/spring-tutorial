@@ -1,5 +1,4 @@
-package vn.com.ntqsolution.bean;
-
+package com.github.truongbb.bean;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -7,10 +6,11 @@ import lombok.experimental.FieldDefaults;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Clazz {
-    int id;
-    String className;
+public class Student extends Person {
+
+  private Clazz clazz;
+  private float avgMark;
 
 }

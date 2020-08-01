@@ -1,4 +1,4 @@
-package com.github.truongbb;
+package com.github.truongbb.bean;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,12 +10,10 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Message {
+public class Person {
 
-    String message;
-
-    public void showMessage() {
-        System.out.println("Mess: " + this.message);
-    }
+  int id;
+  String name;
+  String phone;
 
 }

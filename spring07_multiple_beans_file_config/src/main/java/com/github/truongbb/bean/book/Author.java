@@ -1,8 +1,8 @@
-package vn.com.ntqsolution.bean.book;
+package com.github.truongbb.bean.book;
 
+import com.github.truongbb.bean.common.Person;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import vn.com.ntqsolution.bean.common.Person;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,6 +11,6 @@ import vn.com.ntqsolution.bean.common.Person;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Author extends Person {
 
-    String description;
+  String description;
 
 }

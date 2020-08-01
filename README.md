@@ -6,3 +6,4 @@
 04. [Spring beans part 3](./spring04_beans_part_3/README.md)
 05. [Spring containers](./spring05_containers/README.md)
 06. [Spring autowiring](./spring06_autowiring/README.md)
+07. [Multiple application context configuration files](./spring07_multiple_beans_file_config/README.md)

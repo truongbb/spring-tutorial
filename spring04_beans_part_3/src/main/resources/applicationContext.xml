@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean id="person" class="com.github.truongbb.Person">
+    <property name="id" value="1"/>
+    <property name="name" value="Người"/>
+    <property name="phone" value="0912345678"/>
+  </bean>
+
+  <bean id="clazz" class="com.github.truongbb.Clazz">
+    <property name="id" value="1"/>
+    <property name="className" value="CNPM01"/>
+  </bean>
+
+  <bean id="student" class="com.github.truongbb.Student" parent="person">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh"/>
+    <property name="phone" value="9999999999"/>
+    <property name="avgMark" value="8.5"/>
+    <property name="clazz">
+      <bean id="student_clazz" class="com.github.truongbb.Clazz">
+        <property name="id" value="2"/>
+        <property name="className" value="CNPM02"/>
+      </bean>
+    </property>
+  </bean>
+
+
+  <bean id="student1" class="com.github.truongbb.Student" parent="person">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh 1 "/>
+    <property name="avgMark" value="3.5"/>
+    <property name="phone">
+      <null/>
+    </property>
+    <property name="clazz" ref="clazz"/>
+  </bean>
+
+</beans>

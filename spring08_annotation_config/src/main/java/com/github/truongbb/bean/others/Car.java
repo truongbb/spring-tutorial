@@ -1,4 +1,4 @@
-package vn.com.ntqsolution.bean.others;
+package com.github.truongbb.bean.others;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;

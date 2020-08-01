@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+  <!--  đánh dấu là sử dụng annotation để config  -->
+  <context:annotation-config/>
+
+  <bean id="clazz" class="com.github.truongbb.bean.student.Clazz">
+    <property name="id" value="1"/>
+    <!--    Nếu comment dòng className này vào thì sẽ báo đỏ vì thuộc tính này được đánh dấu là require trong class của nó, nhưng khi cố tình comment lại thì code vẫn chạy như thường ở hàm main
+        chỉ là giá trị cho className là null mà thôi
+        không bắn ra exception như các tut trên mạng nói (chắc phiên bản Spring hiện tại 5.2 đã cải tiến phần này)-->
+    <property name="className" value="CN1"/>
+  </bean>
+
+  <bean id="clazzImpl" class="com.github.truongbb.bean.student.Clazz">
+    <property name="id" value="2"/>
+    <property name="className" value="CN2"/>
+  </bean>
+
+
+  <bean id="author" class="com.github.truongbb.bean.book.Author"/>
+
+  <bean id="publisher" class="com.github.truongbb.bean.book.Publisher"/>
+
+  <bean id="book" class="com.github.truongbb.bean.book.Book"/>
+
+  <bean id="student" class="com.github.truongbb.bean.student.Student"/>
+
+  <bean id="car" class="com.github.truongbb.bean.others.Car"/>
+
+</beans>

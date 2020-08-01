@@ -1,15 +1,15 @@
-package vn.com.ntqsolution.config;
+package com.github.truongbb.config;
 
+import com.github.truongbb.bean.Clazz;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import vn.com.ntqsolution.bean.Clazz;
 
 @Configuration
 public class SecurityConfig {
 
-    @Bean
-    public Clazz clazz() {
-        return new Clazz();
-    }
+  @Bean
+  public Clazz clazz() {
+    return new Clazz();
+  }
 
 }

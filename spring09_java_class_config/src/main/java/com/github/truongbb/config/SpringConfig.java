@@ -1,12 +1,11 @@
-package vn.com.ntqsolution.config;
+package com.github.truongbb.config;
 
+import com.github.truongbb.bean.BeanConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import vn.com.ntqsolution.bean.BeanConfig;
 
 @Configuration
 @Import({BeanConfig.class, SecurityConfig.class})
 public class SpringConfig {
-
 
 }

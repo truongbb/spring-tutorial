@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--  Đánh dấu là sử dụng bean name làm url mapping, ví dụ bên dưới sử dụng name là /about  -->
+  <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+  <bean id="about" name="/about" class="com.github.truongbb.controller.AboutController"/>
+
+  <!--  Đánh dấu là sử dụng url mapping  -->
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+    <property name="mappings">
+      <props>
+        <prop key="/welcome">welcome</prop>
+      </props>
+    </property>
+  </bean>
+
+  <bean id="welcome" name="/welcome" class="com.github.truongbb.controller.WelcomeController"/>
+
+</beans>

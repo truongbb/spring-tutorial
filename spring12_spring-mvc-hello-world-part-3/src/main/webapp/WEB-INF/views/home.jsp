@@ -2,7 +2,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title>Spittr</title>
+  <title>Spittr</title>
 </head>
 <body>
 <h1>Welcome to Spittr</h1>

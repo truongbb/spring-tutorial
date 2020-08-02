@@ -11,3 +11,4 @@
 09. [Java class configuration](./spring09-java-class-config/README.md)
 10. [Spring MVC - Hello world](./spring10-spring-mvc-hello-world/README.md)
 11. [Spring MVC - Hello world part 2](./spring11-spring-mvc-hello-world-part-2/README.md)
+12. [Spring MVC - Hello world part 3](./spring12_spring-mvc-hello-world-part-3/README.md)

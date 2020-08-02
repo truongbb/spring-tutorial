@@ -9,4 +9,5 @@
 07. [Multiple application context configuration files](./spring07-multiple-beans-file-config/README.md)
 08. [Annocation configuration](./spring08-annotation-config/README.md)
 09. [Java class configuration](./spring09-java-class-config/README.md)
-09. [Spring MVC - Hello world](./spring10-spring-mvc-hello-world/README.md)
+10. [Spring MVC - Hello world](./spring10-spring-mvc-hello-world/README.md)
+11. [Spring MVC - Hello world part 2](./spring11-spring-mvc-hello-world-part-2/README.md)

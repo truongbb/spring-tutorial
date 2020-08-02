@@ -14,3 +14,4 @@
 12. [Spring MVC - Hello world part 3](./spring12-spring-mvc-hello-world-part-3/README.md)
 13. [Spring MVC - Explain `@Controller` annotation](./spring13-spring-mvc-explain-controller-annotation/README.md)
 14. [Spring MVC - More about `@Controller`](./spring14-spring-mvc-more-about-controller/README.md)
+15. [Spring MVC - View resolver](./spring15-spring-mvc-view-resolver/README.md)

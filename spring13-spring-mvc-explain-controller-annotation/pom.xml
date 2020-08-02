@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.truongbb</groupId>
-  <artifactId>spring13-spring-mvc_explain-controller-annotation</artifactId>
+  <artifactId>spring13-spring-mvc-explain-controller-annotation</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 

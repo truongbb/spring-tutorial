@@ -12,4 +12,4 @@
 10. [Spring MVC - Hello world](./spring10-spring-mvc-hello-world/README.md)
 11. [Spring MVC - Hello world part 2](./spring11-spring-mvc-hello-world-part-2/README.md)
 12. [Spring MVC - Hello world part 3](./spring12-spring-mvc-hello-world-part-3/README.md)
-13. [Spring MVC - Explain `@Controller` annotation](./spring13-sring-mvc_explain-controller-annotation/README.md)
+13. [Spring MVC - Explain `@Controller` annotation](./spring13-spring-mvc-explain-controller-annotation/README.md)

@@ -15,3 +15,4 @@
 13. [Spring MVC - Explain `@Controller` annotation](./spring13-spring-mvc-explain-controller-annotation/README.md)
 14. [Spring MVC - More about `@Controller`](./spring14-spring-mvc-more-about-controller/README.md)
 15. [Spring MVC - View resolver](./spring15-spring-mvc-view-resolver/README.md)
+16. [Spring MVC - Form handler](./spring16-spring-mvc-form-handler/README.md)

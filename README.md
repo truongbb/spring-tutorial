@@ -25,4 +25,4 @@
 23. [Spring Boot - Introduction](./spring23-spring-boot-introduction/README.md)
 24. [Spring Boot - Build anything](./spring24-spring-boot-build-anything/README.md)
 25. [Spring Boot - Logging](./spring25-spring-boot-logging/README.md)
-
+26. [Spring Boot - Runners](./spring26-spring-boot-runners/README.md)

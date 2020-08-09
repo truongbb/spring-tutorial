@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean id="author" class="com.github.truongbb.bean.book.Author">
+    <property name="name" value="Phan Cuồng"/>
+    <property name="description" value="tác giả Đại Nam dị truyện"/>
+  </bean>
+
+  <bean id="book" class="com.github.truongbb.bean.book.Book" autowire="byType">
+    <property name="id" value="1"/>
+    <property name="name" value="Đại Nam dị truyện"/>
+    <property name="unitPrice" value="25.2"/>
+  </bean>
+
+</beans>

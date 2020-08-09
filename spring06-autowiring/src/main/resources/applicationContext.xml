@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean id="person" class="com.github.truongbb.bean.Person">
+    <property name="id" value="1"/>
+    <property name="name" value="Người"/>
+    <property name="phone" value="0912345678"/>
+  </bean>
+
+  <bean id="clazz" class="com.github.truongbb.bean.Clazz">
+    <property name="id" value="1"/>
+    <property name="className" value="CNPM01"/>
+  </bean>
+
+  <!-- Trong student còn một thuộc tính clazz thuộc kiểu Clazz nữa, nhưng chỉ cần bật autowire byName
+      là Spring tự scan các bean và inject bean phù hợp vào
+  -->
+  <bean id="student-byName" class="com.github.truongbb.bean.Student" parent="person" autowire="byName">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh"/>
+    <property name="phone" value="9999999999"/>
+    <property name="avgMark" value="8.5"/>
+  </bean>
+
+
+  <bean id="student-byType" class="com.github.truongbb.bean.Student" parent="person" autowire="byType">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh"/>
+    <property name="phone" value="9999999999"/>
+    <property name="avgMark" value="8.5"/>
+  </bean>
+
+  <bean id="student-constructor" class="com.github.truongbb.bean.Student" parent="person" autowire="constructor">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh"/>
+    <property name="phone" value="9999999999"/>
+    <property name="avgMark" value="8.5"/>
+  </bean>
+
+  <bean id="student-default" class="com.github.truongbb.bean.Student" parent="person" autowire="default">
+    <property name="id" value="2"/>
+    <property name="name" value="Học sinh"/>
+    <property name="phone" value="9999999999"/>
+    <property name="avgMark" value="8.5"/>
+  </bean>
+
+</beans>

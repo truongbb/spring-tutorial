@@ -1,9 +1,9 @@
-package vn.com.ntqsolution.main;
+package com.github.truongbb.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import vn.com.ntqsolution.bean.Student;
-import vn.com.ntqsolution.repository.StudentRepository;
+import com.github.truongbb.bean.Student;
+import com.github.truongbb.repository.StudentRepository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package vn.com.ntqsolution.repository;
+package com.github.truongbb.repository;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -19,20 +19,20 @@ import javax.persistence.PersistenceContext;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class BaseRepository {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+  @Autowired
+  JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+  @Autowired
+  NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
 //    @Autowired
 //    SessionFactory sessionFactory;
 
-    public Session getSession() {
-        return getEntityManager().unwrap(Session.class).getSessionFactory().openSession();
-    }
+  public Session getSession() {
+    return getEntityManager().unwrap(Session.class).getSessionFactory().openSession();
+  }
 
-    @PersistenceContext
-    EntityManager entityManager;
+  @PersistenceContext
+  EntityManager entityManager;
 
 }

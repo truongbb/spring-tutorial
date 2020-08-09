@@ -1,4 +1,4 @@
-package vn.com.ntqsolution.introduction.controller;
+package com.github.truongbb.introduction.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/hello")
 public class HelloController {
 
-    @RequestMapping("/world")
-    public ResponseEntity<String> helloWorld() {
-        return new ResponseEntity<>("Hello world", HttpStatus.OK);
-    }
+  @RequestMapping("/world")
+  public ResponseEntity<String> helloWorld() {
+    return new ResponseEntity<>("Hello world", HttpStatus.OK);
+  }
 
 }

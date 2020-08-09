@@ -19,3 +19,4 @@
 17. [Spring MVC - Annocations and notes](./spring17-spring-mvc-annotations-and-notes/README.md)
 18. [Spring Data - Introduction](./spring18-spring-data-introduction/README.md)
 19. [Spring Data - Annotation configuration](./spring19-spring-data-annotation-config/README.md)
+20. [Spring Data - HIbernate template](./spring20-spring-data-hibernate-template/README.md)

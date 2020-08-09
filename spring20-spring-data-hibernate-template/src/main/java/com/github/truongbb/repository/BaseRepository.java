@@ -1,4 +1,4 @@
-package vn.com.ntqsolution.repository;
+package com.github.truongbb.repository;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -10,22 +10,22 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-@Repository
 @Data
+@Repository
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class BaseRepository {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+  @Autowired
+  JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+  @Autowired
+  NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    @Autowired
-    SessionFactory sessionFactory;
+  @Autowired
+  SessionFactory sessionFactory;
 
-    public Session getSession() {
-        return sessionFactory.openSession();
-    }
+  public Session getSession() {
+    return sessionFactory.openSession();
+  }
 
 }

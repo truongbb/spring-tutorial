@@ -23,3 +23,4 @@
 21. [Spring Data - Entity manager](./spring21-spring-data-entity-manager/README.md)
 22. [Spring Data - Automatic JPA repository](./spring22-spring-data-automatic-jpa-repository/README.md)
 23. [Spring Boot - Introduction](./spring23-spring-boot-introduction/README.md)
+24. [Spring Boot - Build anything](./spring24-spring-boot-build-anything/README.md)

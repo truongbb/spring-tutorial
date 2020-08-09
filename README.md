@@ -24,3 +24,5 @@
 22. [Spring Data - Automatic JPA repository](./spring22-spring-data-automatic-jpa-repository/README.md)
 23. [Spring Boot - Introduction](./spring23-spring-boot-introduction/README.md)
 24. [Spring Boot - Build anything](./spring24-spring-boot-build-anything/README.md)
+25. [Spring Boot - Logging](./spring25-spring-boot-logging/README.md)
+
